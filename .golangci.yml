@@ -1,0 +1,15 @@
+version: "2"
+
+linters:
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - ineffassign
+    - unused
+  settings:
+    errcheck:
+      exclude-functions:
+        - (net.Conn).Close
+        - (*os/exec.Cmd).Process.Kill
+
